@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RockPaperXisors</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            background-color: lightpink;
+            height: 5rem;
+            color: black;
+            line-height: 5rem;
+        }
+        .choices {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .choice {
+            height: 150px;
+            width: 150px;
+            margin: 50px 50px 0px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .choice:hover {
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        img {
+            height: 150px;
+            width: 150px;
+            object-fit: contain;
+        }
+        .scoreBoard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            gap: 3rem;
+            margin: 50px;
+        }
+        .msg-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #msg {
+            height: 50px;
+            width: auto;
+            padding: 0px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: palevioletred;
+        }
+
+        footer {
+            background-color: lightpink;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Rock Paper Xisors</h1>
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="imgs/rockHand.png" alt="Rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="imgs/paperHand.png" alt="Paper">
+        </div>
+        <div class="choice" id="scissor">
+            <img src="imgs/scissorHand.png" alt="Scissor">
+        </div>
+    </div>
+
+    <div class="scoreBoard">
+        <div class="score">
+            <p id="userScore">0</p>
+            <p>USER</p>
+        </div>
+        <div class="score">
+            <p id="computerScore">0</p>
+            <p>COMPUTER</p>
+        </div>
+    </div>
+
+    <div class="msg-container">
+        <p id="msg">start the game</p>
+    </div>
+
+    <footer>
+        made with &hearts; by Shivankur Sharma
+        <br>
+        <a href="https://www.github.com/shivankursharma018" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
